@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" role="img" aria-label="Neural mind">
+  <defs>
+    <linearGradient id="ntIconOutline" x1="7" y1="7" x2="29" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3fc8f0"/>
+      <stop offset="1" stop-color="#7d8cff"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#ntIconOutline)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17.7 8.3c-4.1-1.4-8.6 1.1-9.3 5-.6 3.4 1.2 6.7 4.1 8.1 1 2 2.7 2.9 5.2 2.7"/>
+    <path d="M18.3 8.3c4.1-1.4 8.6 1.1 9.3 5 .6 3.4-1.2 6.7-4.1 8.1-1 2-2.7 2.9-5.2 2.7"/>
+    <path d="M16.5 24.1c-.2 2.4.6 3.8 1.5 4.9"/>
+    <path d="M19.5 24.1c.2 2.4-.6 3.8-1.5 4.9"/>
+  </g>
+  <path d="M18 9.1v14.2" stroke="#3fc8f0" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <g stroke="#8fa9d8" stroke-width="0.9" stroke-linecap="round" opacity="0.65">
+    <path d="M17.8 9.6 11.9 13.1"/>
+    <path d="M18.2 9.6 24.1 13.1"/>
+    <path d="M11.9 13.1 14 19.9"/>
+    <path d="M24.1 13.1 22 19.9"/>
+    <path d="M14 19.9 17.9 23.4"/>
+    <path d="M22 19.9 18.1 23.4"/>
+  </g>
+  <g>
+    <circle cx="17.8" cy="8.4" r="1.8" fill="#ffffff"/>
+    <circle cx="11.9" cy="13.1" r="1.6" fill="#3fc8f0"/>
+    <circle cx="24.1" cy="13.1" r="1.6" fill="#7d8cff"/>
+    <circle cx="14" cy="19.9" r="1.5" fill="#3fc8f0"/>
+    <circle cx="22" cy="19.9" r="1.5" fill="#ff6bd6"/>
+    <circle cx="18" cy="23.4" r="1.7" fill="#ffffff"/>
+    <circle cx="18" cy="29" r="1.2" fill="#7d8cff"/>
+  </g>
+</svg>

@@ -1,0 +1,3 @@
+- insert:
+    - id: neural-thoughts
+      name: '@local/neural-thoughts'

@@ -1,0 +1,38 @@
+# Dependencies and local installs
+node_modules/
+.pnpm-store/
+.dsh/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Build, coverage, archives
+dist/
+build/
+coverage/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Local data and logs
+*.log
+*.jsonl
+*.zst
+*.blend1
+*.bak
+*.orig
+*.rej
+
+# Editor and OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
