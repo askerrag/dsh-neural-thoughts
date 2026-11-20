@@ -4,7 +4,7 @@
 
 [Русский](README.ru.md) · [Security](SECURITY.md) · [Changelog](CHANGELOG.md) · [MIT License](LICENSE)
 
-![Neural mind preview: a glowing 3D brain graph with thoughts, commands, and a node context panel](docs/preview.svg)
+![Neural mind: a live 3D brain of a DeepSeek Harness chat — colored lobes, floating reasoning and command cards, the history scrubber and the node context panel](docs/screenshots/neural-mind.png)
 
 Neural mind turns the Session journal of a DeepSeek Harness chat into a living
 brain-shaped graph. Reasoning, tool calls, documents, references, plans, the
@@ -46,10 +46,12 @@ and the authenticated attachment/file routes of the running DSH Web UI.
   gets a table; everything else is shown as text. Copy, download, jump to the
   source node, or page older history. Newly created or accessed text files pop
   above the brain with a file card.
-- **Calls tab** — skill and MCP calls in one place, grouped by family with
-  **All / Skills / MCP** filters, status, timing, and click-to-open. On the brain,
-  a skill gets a hexagon glyph and an MCP server call gets a port glyph, with
-  family labels, live call counters, hover details and clickable call cards.
+- **Tools & Skills tab** — every tool call in the loaded chat, grouped as
+  **Tools**, **Skills** and **MCP** with **All / Tools / Skills / MCP** filters,
+  status, timing, search and click-to-open. On the brain, skill calls get a
+  hexagon glyph and MCP server calls get a port glyph, with family labels, live
+  counters, hover details and clickable call cards; ordinary tools stay normal
+  tool nodes.
 - **Languages** — Russian, English, German, French, Spanish, Italian, Portuguese.
   English is the default on first run; the choice is remembered after that.
 - **History timeline** — replay how the brain was built. Play/pause, restart,
@@ -105,7 +107,7 @@ root. Upload it as a GitHub release asset and paste the asset URL into
 
 ```sh
 npm pack
-# local-neural-thoughts-1.5.1.tgz
+# local-neural-thoughts-1.6.0.tgz
 ```
 
 The release tarball is optional: cloning the repository and choosing the folder
@@ -130,6 +132,9 @@ inserts the `neural-thoughts` row and `dsh.client.platform: "web"` loads
   descriptions explain each class.
 - **Media:** the **Media** tab in the side panel. If the loaded journal does not
   reach the files you need, use **Show earlier files**.
+- **Tools & Skills:** the **Tools & Skills** tab in the side panel. Filter by
+  **Tools**, **Skills** or **MCP**, or search all calls; click a row to open its
+  node.
 - **Keyboard on the canvas:** arrow keys rotate, `+`/`-` zoom, `[`/`]` (physical
   bracket keys on any layout) or `PageUp`/`PageDown` cycle nodes, `Enter` opens
   the selected node, `Esc` closes the panel.
@@ -151,10 +156,11 @@ inserts the `neural-thoughts` row and `dsh.client.platform: "web"` loads
 - **Show earlier files** pages older Session history into the loaded window, which
   is how the galleries reach files outside the initial tail. It does not modify
   history.
-- Skill and MCP calls are **displayed from the existing Session journal only**.
-  The plugin never invokes a skill, connects to an MCP server, or reads MCP
-  credentials; it classifies the `skill` and `mcp__…` tool names locally for the
-  Calls tab and the brain. No call arguments or results are sent anywhere.
+- Tool, skill and MCP calls are **displayed from the existing Session journal
+  only**. The plugin never invokes a tool or skill, connects to an MCP server, or
+  reads MCP credentials; it recognizes ordinary tool calls and classifies the
+  `skill` and `mcp__…` names locally for the **Tools & Skills** tab and the
+  brain. No call arguments or results are sent anywhere.
 - The Files tab only lists text files **inside the selected Session workspace**,
   never arbitrary system paths. Secret-like names and directories (`.env`, keys,
   credentials, tokens, `.ssh`, `.aws`, `.dsh`, `.git`, `node_modules`, …) are
@@ -185,9 +191,10 @@ See [SECURITY.md](SECURITY.md) for the full security model and reporting.
   calls and `present` deliverables under the workspace, not arbitrary shell
   output. Files larger than 512 KiB are listed but not previewed. Binary and
   secret-like files are intentionally excluded.
-- The Calls tab keeps the newest 120 skill/MCP call nodes from the loaded graph;
-  counters cover the loaded graph, not the entire on-disk journal. Project mode
-  does not aggregate calls across chats; open a chat to its own Calls tab.
+- The **Tools & Skills** tab keeps the newest 120 tool-call nodes from the loaded
+  graph, including ordinary tools, skills and MCP calls; counters cover the
+  loaded graph, not the entire on-disk journal. Project mode does not aggregate
+  calls across chats; open a chat to its own Tools & Skills tab.
 - Project mode does not aggregate media across all project chats; open a chat to
   browse its own gallery.
 - The panel is a dark observer surface; the composer pill uses DSH theme tokens.

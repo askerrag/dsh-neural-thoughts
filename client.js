@@ -72,6 +72,7 @@ window.__ModuleLoader__.load({
       'agent', 'error', 'attempt',
     ])
     const CALL_FAMILIES = {
+      tool: { color: '#9fd9ff' },
       skill: { color: '#d6b4ff' },
       mcp: { color: '#6ff0ff' },
     }
@@ -264,21 +265,24 @@ window.__ModuleLoader__.load({
       'tabs.signals': 'Commands',
       'tabs.node': 'Node',
       'tabs.media': 'Media',
-      'tabs.calls': 'Calls',
+      'tabs.calls': 'Tools & Skills',
       'calls.mcpServer': 'MCP server',
       'calls.mcpTool': 'MCP tool',
-      'calls.title': 'Skill and MCP calls',
-      'calls.subtitle': 'Capabilities used in this chat',
+      'calls.title': 'Tools & Skills',
+      'calls.subtitle': 'Tool, skill and MCP calls in this chat',
       'calls.all': 'All',
+      'calls.tool': 'Tools',
       'calls.skill': 'Skills',
       'calls.mcp': 'MCP',
-      'calls.empty': 'No skill or MCP calls yet',
-      'calls.emptyHint': 'They appear here when the agent uses a capability.',
+      'calls.empty': 'No tool calls yet',
+      'calls.emptyHint': 'They appear here when the agent calls a tool, skill or MCP server.',
       'calls.emptyFiltered': 'Nothing matches',
       'calls.skillLoaded': 'Skill loaded',
       'calls.total': 'Total: {count}',
+      'calls.toolHint': 'Show tool calls',
       'calls.skillHint': 'Show skill calls',
       'calls.mcpHint': 'Show MCP calls',
+      'calls.toolTag': 'TOOL',
       'calls.skillTag': 'SKILL',
       'calls.mcpTag': 'MCP',
       'timeline.label': 'History',
@@ -480,7 +484,7 @@ window.__ModuleLoader__.load({
       'project.legendChat': 'Chat',
       'project.legendLink': 'Fork / subagent',
       'project.legendTime': 'By time',
-      'filter.placeholder': 'Filter thoughts, commands and calls…',
+      'filter.placeholder': 'Filter thoughts, tools and calls…',
       'filter.clear': 'Clear filter',
       'filter.empty': 'Nothing matches the filter',
       'node.inputs': 'Inputs',
@@ -522,21 +526,24 @@ window.__ModuleLoader__.load({
       'tabs.signals': 'Команды',
       'tabs.node': 'Узел',
       'tabs.media': 'Медиа',
-      'tabs.calls': 'Вызовы',
+      'tabs.calls': 'Tools & Skills',
       'calls.mcpServer': 'MCP-сервер',
       'calls.mcpTool': 'MCP-инструмент',
-      'calls.title': 'Вызовы скиллов и MCP',
-      'calls.subtitle': 'Возможности, использованные в этом чате',
+      'calls.title': 'Tools & Skills',
+      'calls.subtitle': 'Вызовы инструментов, скиллов и MCP в этом чате',
       'calls.all': 'Все',
+      'calls.tool': 'Инструменты',
       'calls.skill': 'Скиллы',
       'calls.mcp': 'MCP',
-      'calls.empty': 'Пока нет вызовов скиллов и MCP',
-      'calls.emptyHint': 'Они появятся здесь, когда агент использует возможность.',
+      'calls.empty': 'Пока нет вызовов инструментов',
+      'calls.emptyHint': 'Они появятся здесь, когда агент вызовет инструмент, скилл или MCP-сервер.',
       'calls.emptyFiltered': 'Ничего не найдено',
       'calls.skillLoaded': 'Скилл загружен',
       'calls.total': 'Всего: {count}',
+      'calls.toolHint': 'Показать вызовы инструментов',
       'calls.skillHint': 'Показать вызовы скиллов',
       'calls.mcpHint': 'Показать вызовы MCP',
+      'calls.toolTag': 'TOOL',
       'calls.skillTag': 'СКИЛЛ',
       'calls.mcpTag': 'MCP',
       'timeline.label': 'История',
@@ -738,7 +745,7 @@ window.__ModuleLoader__.load({
       'project.legendChat': 'Чат',
       'project.legendLink': 'Форк / подагент',
       'project.legendTime': 'По времени',
-      'filter.placeholder': 'Фильтр мыслей, команд и вызовов…',
+      'filter.placeholder': 'Фильтр мыслей, инструментов и вызовов…',
       'filter.clear': 'Очистить фильтр',
       'filter.empty': 'По фильтру ничего не найдено',
       'node.inputs': 'Входящие',
@@ -892,7 +899,7 @@ window.__ModuleLoader__.load({
       'project.legendChat': 'Chat',
       'project.legendLink': 'Fork / Subagent',
       'project.legendTime': 'Nach Zeit',
-      'filter.placeholder': 'Gedanken, Befehle und Aufrufe filtern…',
+      'filter.placeholder': 'Gedanken, Werkzeuge und Aufrufe filtern…',
       'filter.clear': 'Filter löschen',
       'filter.empty': 'Keine Treffer für den Filter',
       'time.justNow': 'gerade eben',
@@ -1033,7 +1040,7 @@ window.__ModuleLoader__.load({
       'project.legendChat': 'Chat',
       'project.legendLink': 'Fork / sous-agent',
       'project.legendTime': 'Par temps',
-      'filter.placeholder': 'Filtrer pensées, commandes et appels…',
+      'filter.placeholder': 'Filtrer pensées, outils et appels…',
       'filter.clear': 'Effacer le filtre',
       'filter.empty': 'Aucun résultat pour ce filtre',
       'time.justNow': "à l'instant",
@@ -1174,7 +1181,7 @@ window.__ModuleLoader__.load({
       'project.legendChat': 'Chat',
       'project.legendLink': 'Fork / subagente',
       'project.legendTime': 'Por tiempo',
-      'filter.placeholder': 'Filtrar pensamientos, comandos y llamadas…',
+      'filter.placeholder': 'Filtrar pensamientos, herramientas y llamadas…',
       'filter.clear': 'Borrar filtro',
       'filter.empty': 'Nada coincide con el filtro',
       'time.justNow': 'ahora mismo',
@@ -1315,7 +1322,7 @@ window.__ModuleLoader__.load({
       'project.legendChat': 'Chat',
       'project.legendLink': 'Fork / subagente',
       'project.legendTime': 'Per tempo',
-      'filter.placeholder': 'Filtra pensieri, comandi e chiamate…',
+      'filter.placeholder': 'Filtra pensieri, strumenti e chiamate…',
       'filter.clear': 'Cancella filtro',
       'filter.empty': 'Nessun risultato per il filtro',
       'time.justNow': 'proprio ora',
@@ -1467,7 +1474,7 @@ window.__ModuleLoader__.load({
       'project.legendLink': 'Fork / subagente',
       'project.legendTime': 'Por tempo',
       'project.partial': '{shown} de {total} chats mostrados',
-      'filter.placeholder': 'Filtrar pensamentos, comandos e chamadas…',
+      'filter.placeholder': 'Filtrar pensamentos, ferramentas e chamadas…',
       'filter.clear': 'Limpar filtro',
       'filter.empty': 'Nada corresponde ao filtro',
       'time.justNow': 'agora mesmo',
@@ -1649,97 +1656,112 @@ window.__ModuleLoader__.load({
     })
 
     Object.assign(DE, {
-      'tabs.calls': 'Aufrufe',
+      'tabs.calls': 'Tools & Skills',
       'calls.mcpServer': 'MCP-Server',
       'calls.mcpTool': 'MCP-Werkzeug',
-      'calls.title': 'Skill- und MCP-Aufrufe',
-      'calls.subtitle': 'In diesem Chat genutzte Fähigkeiten',
+      'calls.title': 'Tools & Skills',
+      'calls.subtitle': 'Tool-, Skill- und MCP-Aufrufe in diesem Chat',
       'calls.all': 'Alle',
+      'calls.tool': 'Tools',
       'calls.skill': 'Skills',
       'calls.mcp': 'MCP',
-      'calls.empty': 'Noch keine Skill- oder MCP-Aufrufe',
-      'calls.emptyHint': 'Sie erscheinen hier, wenn der Agent eine Fähigkeit nutzt.',
+      'calls.empty': 'Noch keine Tool-Aufrufe',
+      'calls.emptyHint': 'Sie erscheinen hier, wenn der Agent ein Tool, einen Skill oder einen MCP-Server aufruft.',
       'calls.emptyFiltered': 'Keine Treffer',
       'calls.skillLoaded': 'Skill geladen',
       'calls.total': 'Gesamt: {count}',
+      'calls.toolHint': 'Tool-Aufrufe anzeigen',
       'calls.skillHint': 'Skill-Aufrufe anzeigen',
       'calls.mcpHint': 'MCP-Aufrufe anzeigen',
+      'calls.toolTag': 'TOOL',
       'calls.skillTag': 'SKILL',
       'calls.mcpTag': 'MCP',
     })
     Object.assign(FR, {
-      'tabs.calls': 'Appels',
+      'tabs.calls': 'Tools & Skills',
       'calls.mcpServer': 'Serveur MCP',
       'calls.mcpTool': 'Outil MCP',
-      'calls.title': 'Appels de skills et MCP',
-      'calls.subtitle': 'Capacités utilisées dans ce chat',
+      'calls.title': 'Tools & Skills',
+      'calls.subtitle': 'Appels d’outils, de skills et MCP dans ce chat',
       'calls.all': 'Tous',
+      'calls.tool': 'Outils',
       'calls.skill': 'Skills',
       'calls.mcp': 'MCP',
-      'calls.empty': 'Aucun appel de skill ou MCP',
-      'calls.emptyHint': "Ils apparaîtront ici lorsque l'agent utilisera une capacité.",
+      'calls.empty': 'Aucun appel d’outil',
+      'calls.emptyHint': 'Ils apparaîtront ici lorsque l’agent appellera un outil, un skill ou un serveur MCP.',
       'calls.emptyFiltered': 'Aucun résultat',
       'calls.skillLoaded': 'Skill chargé',
       'calls.total': 'Total : {count}',
+      'calls.toolHint': 'Afficher les appels d’outils',
       'calls.skillHint': 'Afficher les appels de skills',
       'calls.mcpHint': 'Afficher les appels MCP',
+      'calls.toolTag': 'TOOL',
       'calls.skillTag': 'SKILL',
       'calls.mcpTag': 'MCP',
     })
     Object.assign(ES, {
-      'tabs.calls': 'Llamadas',
+      'tabs.calls': 'Tools & Skills',
       'calls.mcpServer': 'Servidor MCP',
       'calls.mcpTool': 'Herramienta MCP',
-      'calls.title': 'Llamadas de skills y MCP',
-      'calls.subtitle': 'Capacidades usadas en este chat',
+      'calls.title': 'Tools & Skills',
+      'calls.subtitle': 'Llamadas a herramientas, skills y MCP en este chat',
       'calls.all': 'Todas',
+      'calls.tool': 'Herramientas',
       'calls.skill': 'Skills',
       'calls.mcp': 'MCP',
-      'calls.empty': 'Aún no hay llamadas de skill o MCP',
-      'calls.emptyHint': 'Aparecerán aquí cuando el agente use una capacidad.',
+      'calls.empty': 'Aún no hay llamadas a herramientas',
+      'calls.emptyHint': 'Aparecerán aquí cuando el agente llame a una herramienta, skill o servidor MCP.',
       'calls.emptyFiltered': 'No hay resultados',
       'calls.skillLoaded': 'Skill cargado',
       'calls.total': 'Total: {count}',
-      'calls.skillHint': 'Mostrar llamadas de skills',
+      'calls.toolHint': 'Mostrar llamadas a herramientas',
+      'calls.skillHint': 'Mostrar llamadas a skills',
       'calls.mcpHint': 'Mostrar llamadas MCP',
+      'calls.toolTag': 'TOOL',
       'calls.skillTag': 'SKILL',
       'calls.mcpTag': 'MCP',
     })
     Object.assign(IT, {
-      'tabs.calls': 'Chiamate',
+      'tabs.calls': 'Tools & Skills',
       'calls.mcpServer': 'Server MCP',
       'calls.mcpTool': 'Strumento MCP',
-      'calls.title': 'Chiamate a skill e MCP',
-      'calls.subtitle': 'Capacità usate in questa chat',
+      'calls.title': 'Tools & Skills',
+      'calls.subtitle': 'Chiamate a strumenti, skill e MCP in questa chat',
       'calls.all': 'Tutte',
+      'calls.tool': 'Strumenti',
       'calls.skill': 'Skill',
       'calls.mcp': 'MCP',
-      'calls.empty': 'Nessuna chiamata a skill o MCP',
-      'calls.emptyHint': "Appariranno qui quando l'agente userà una capacità.",
+      'calls.empty': 'Nessuna chiamata a strumenti',
+      'calls.emptyHint': 'Appariranno qui quando l’agente chiamerà uno strumento, una skill o un server MCP.',
       'calls.emptyFiltered': 'Nessun risultato',
       'calls.skillLoaded': 'Skill caricata',
       'calls.total': 'Totale: {count}',
+      'calls.toolHint': 'Mostra le chiamate agli strumenti',
       'calls.skillHint': 'Mostra le chiamate alle skill',
       'calls.mcpHint': 'Mostra le chiamate MCP',
+      'calls.toolTag': 'TOOL',
       'calls.skillTag': 'SKILL',
       'calls.mcpTag': 'MCP',
     })
     Object.assign(PT, {
-      'tabs.calls': 'Chamadas',
+      'tabs.calls': 'Tools & Skills',
       'calls.mcpServer': 'Servidor MCP',
       'calls.mcpTool': 'Ferramenta MCP',
-      'calls.title': 'Chamadas de skills e MCP',
-      'calls.subtitle': 'Capacidades usadas neste chat',
+      'calls.title': 'Tools & Skills',
+      'calls.subtitle': 'Chamadas de ferramentas, skills e MCP neste chat',
       'calls.all': 'Todas',
+      'calls.tool': 'Ferramentas',
       'calls.skill': 'Skills',
       'calls.mcp': 'MCP',
-      'calls.empty': 'Ainda não há chamadas de skill ou MCP',
-      'calls.emptyHint': 'Elas aparecerão aqui quando o agente usar uma capacidade.',
+      'calls.empty': 'Ainda não há chamadas de ferramentas',
+      'calls.emptyHint': 'Elas aparecerão aqui quando o agente chamar uma ferramenta, skill ou servidor MCP.',
       'calls.emptyFiltered': 'Nenhum resultado',
       'calls.skillLoaded': 'Skill carregada',
       'calls.total': 'Total: {count}',
+      'calls.toolHint': 'Mostrar chamadas de ferramentas',
       'calls.skillHint': 'Mostrar chamadas de skills',
       'calls.mcpHint': 'Mostrar chamadas MCP',
+      'calls.toolTag': 'TOOL',
       'calls.skillTag': 'SKILL',
       'calls.mcpTag': 'MCP',
     })
@@ -3786,11 +3808,11 @@ window.__ModuleLoader__.load({
 
       function buildCalls() {
         if (graph.projectMode) return []
-        const calls = graph.nodes.filter(node => node.family === 'skill' || node.family === 'mcp')
+        const calls = graph.nodes.filter(node => node.toolName)
         calls.sort((a, b) => a.time - b.time)
         return calls.slice(-120).reverse().map(node => ({
           id: node.id,
-          family: node.family,
+          family: node.family === 'skill' || node.family === 'mcp' ? node.family : 'tool',
           toolName: node.toolName || '',
           skillName: node.skillName || null,
           mcpServer: node.mcpServer || null,
@@ -3804,12 +3826,14 @@ window.__ModuleLoader__.load({
       }
 
       function buildCallCounts() {
-        const counts = { skill: 0, mcp: 0, total: 0 }
+        const counts = { tool: 0, skill: 0, mcp: 0, total: 0 }
         for (const node of graph.nodes) {
+          if (!node.toolName) continue
           if (node.family === 'skill') counts.skill += 1
           else if (node.family === 'mcp') counts.mcp += 1
+          else counts.tool += 1
+          counts.total += 1
         }
-        counts.total = counts.skill + counts.mcp
         return counts
       }
 
@@ -4206,7 +4230,7 @@ window.__ModuleLoader__.load({
           anchors: projectMode ? [] : buildAnchors(),
           signals: projectMode ? [] : buildSignals(),
           calls: projectMode ? [] : buildCalls(),
-          callCounts: projectMode ? { skill: 0, mcp: 0, total: 0 } : buildCallCounts(),
+          callCounts: projectMode ? { tool: 0, skill: 0, mcp: 0, total: 0 } : buildCallCounts(),
           events: playbackActive ? [] : buildEvents(),
           live: playbackActive ? null : buildLive(),
           media: projectMode
@@ -5736,7 +5760,9 @@ window.__ModuleLoader__.load({
     }
 
     function CallFamilyIcon(props) {
-      return props && props.family === 'skill' ? h(IconSkill) : h(IconMcp)
+      if (props && props.family === 'skill') return h(IconSkill)
+      if (props && props.family === 'mcp') return h(IconMcp)
+      return h(IconBolt)
     }
 
     function IconPlay() {
@@ -6827,17 +6853,17 @@ window.__ModuleLoader__.load({
             })),
             !projectMode && snapshot.callCounts && snapshot.callCounts.total
               ? h('span', { className: 'dsh-nt-hud-calls' },
-                ['skill', 'mcp'].map(key => snapshot.callCounts[key]
+                ['tool', 'skill', 'mcp'].map(key => snapshot.callCounts[key]
                   ? h('button', {
                     key,
                     type: 'button',
                     className: 'dsh-nt-hud-call',
                     style: { '--nt-color': callFamilyColor(key) },
-                    title: t(key === 'skill' ? 'calls.skillHint' : 'calls.mcpHint'),
+                    title: t('calls.' + key + 'Hint'),
                     onClick: () => uiStore.patch({ tab: 'calls' }),
                   },
                   h(CallFamilyIcon, { family: key }),
-                  h('span', null, t(key === 'skill' ? 'calls.skill' : 'calls.mcp')),
+                  h('span', null, t('calls.' + key)),
                   h('span', { className: 'dsh-nt-hud-call-count' }, snapshot.callCounts[key]))
                   : null))
               : null,
@@ -8272,12 +8298,12 @@ window.__ModuleLoader__.load({
       const { snapshot, t, locale, onSelect, filter, selectedId, onClearFilter } = props
       const [family, setFamily] = useState('all')
       const calls = Array.isArray(snapshot.calls) ? snapshot.calls : []
-      const counts = snapshot.callCounts || { skill: 0, mcp: 0, total: 0 }
+      const counts = snapshot.callCounts || { tool: 0, skill: 0, mcp: 0, total: 0 }
       const needle = String(filter || '').trim().toLowerCase()
 
       if (!counts.total) {
         return h('div', { className: 'dsh-nt-empty-panel' },
-          h('div', { className: 'dsh-nt-empty-orb' }, h(IconMcp)),
+          h('div', { className: 'dsh-nt-empty-orb' }, h(IconBolt)),
           h('strong', null, t('calls.empty')),
           h('span', null, t('calls.emptyHint'))
         )
@@ -8289,11 +8315,11 @@ window.__ModuleLoader__.load({
         return [call.toolName, call.skillName, call.mcpServer, call.mcpTool, call.title, call.summary]
           .some(value => String(value || '').toLowerCase().includes(needle))
       })
-      const groups = ['skill', 'mcp']
+      const groups = ['tool', 'skill', 'mcp']
         .filter(key => family === 'all' || key === family)
         .map(key => ({
           key,
-          label: t(key === 'skill' ? 'calls.skill' : 'calls.mcp'),
+          label: t('calls.' + key),
           color: callFamilyColor(key),
           calls: visible.filter(call => call.family === key),
         }))
@@ -8301,6 +8327,7 @@ window.__ModuleLoader__.load({
 
       const chips = [
         { key: 'all', label: t('calls.all'), count: counts.total, color: '#b9d8f2' },
+        { key: 'tool', label: t('calls.tool'), count: counts.tool, color: callFamilyColor('tool') },
         { key: 'skill', label: t('calls.skill'), count: counts.skill, color: callFamilyColor('skill') },
         { key: 'mcp', label: t('calls.mcp'), count: counts.mcp, color: callFamilyColor('mcp') },
       ]
@@ -8342,10 +8369,17 @@ window.__ModuleLoader__.load({
               const color = callFamilyColor(call.family)
               const name = call.family === 'skill'
                 ? (call.skillName || call.title || call.toolName)
-                : [call.mcpServer || 'MCP', call.mcpTool || call.title].filter(Boolean).join(' / ')
+                : call.family === 'mcp'
+                  ? [call.mcpServer || 'MCP', call.mcpTool || call.title].filter(Boolean).join(' / ')
+                  : (call.toolName || call.title || '')
               const detail = call.family === 'skill'
                 ? (call.summary || t('calls.skillLoaded'))
                 : (call.summary || '')
+              const badgeKey = call.family === 'skill'
+                ? 'calls.skillTag'
+                : call.family === 'mcp'
+                  ? 'calls.mcpTag'
+                  : 'calls.toolTag'
               const status = call.status === 'running' ? 'is-running' : call.status === 'error' ? 'is-error' : 'is-done'
               return h('button', {
                 key: call.id,
@@ -8360,7 +8394,7 @@ window.__ModuleLoader__.load({
               ),
               h('span', { className: 'dsh-nt-call-main' },
                 h('span', { className: 'dsh-nt-call-top' },
-                  h('span', { className: 'dsh-nt-call-badge' }, t(call.family === 'skill' ? 'calls.skillTag' : 'calls.mcpTag')),
+                  h('span', { className: 'dsh-nt-call-badge' }, t(badgeKey)),
                   h('span', { className: 'dsh-nt-call-name' }, name)
                 ),
                 detail ? h('span', { className: 'dsh-nt-call-summary' }, detail) : null
@@ -10009,24 +10043,24 @@ window.__ModuleLoader__.load({
   box-shadow: 0 0 10px rgba(80, 210, 255, 0.5);
 }
 .dsh-nt-tabs {
-  display: flex; gap: 1px; padding: 10px 6px 0; flex: 0 0 auto;
-  overflow-x: auto; scrollbar-width: none;
+  display: flex; flex-wrap: wrap; gap: 0; padding: 9px 4px 0; flex: 0 0 auto;
+  overflow: visible; scrollbar-width: none;
 }
 .dsh-nt-tabs::-webkit-scrollbar { display: none; }
 .dsh-nt-tab {
   flex: 0 0 auto;
-  height: 30px;
-  padding: 0 6px;
-  gap: 4px;
-  font-size: 10px;
+  height: 27px;
+  padding: 0 3px;
+  gap: 2px;
+  font-size: 9px;
   border: 1px solid transparent;
   border-bottom: 0;
   border-radius: 9px 9px 0 0;
   background: transparent;
   color: rgba(165, 205, 240, 0.56);
-  font: inherit; letter-spacing: 0.03em;
+  font: inherit; letter-spacing: 0;
   cursor: pointer;
-  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 2px;
 }
 .dsh-nt-tab:hover { color: #e8f7ff; background: rgba(24, 44, 72, 0.34); }
 .dsh-nt-tab.is-active {
@@ -10037,10 +10071,10 @@ window.__ModuleLoader__.load({
 }
 .dsh-nt-tab:disabled { opacity: 0.4; cursor: default; }
 .dsh-nt-tab-count {
-  min-width: 14px; height: 14px; padding: 0 3px;
+  min-width: 12px; height: 12px; padding: 0 2px;
   border-radius: 999px;
   background: rgba(110, 220, 255, 0.16);
-  color: #a9e9ff; font-size: 8.5px; line-height: 14px; text-align: center;
+  color: #a9e9ff; font-size: 7.5px; line-height: 12px; text-align: center;
 }
 .dsh-nt-side-body {
   flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain;

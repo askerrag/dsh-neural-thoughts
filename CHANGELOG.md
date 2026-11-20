@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.6.0 — 2026-11-19
+
+- The **Calls** tab is now **Tools & Skills** and lists every tool call in the
+  loaded chat, not only skills and MCP: All / Tools / Skills / MCP filters,
+  grouped rows, search, status, timing, and click-to-open.
+- Generic tool calls use a bolt badge and a `TOOL` label; skill and MCP calls keep
+  their hexagon/port brain glyphs, family colors, labels, HUD counters, tooltips
+  and toast cards.
+- Updated the seven-language UI, plugin metadata, README, security model and
+  version to 1.6.0.
+
 ## 1.5.1 — 2026-11-19
 
 - Fixed sector legend chips overlapping at narrow widths by keeping labels on one line and letting the row wrap cleanly.
