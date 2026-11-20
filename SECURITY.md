@@ -37,16 +37,14 @@ Neural mind is a **read-only client-side observer** for DeepSeek Harness:
   text, Markdown output and table cells are rendered as React text/elements, never
   with `dangerouslySetInnerHTML` or an iframe.
 
-### Tool, skill and MCP calls
+### Skill and MCP calls
 
-- The **Tools & Skills** tab and brain call nodes are **derived from the existing
-  Session journal**. The plugin recognizes ordinary tool calls, the `skill` tool
-  and tool names beginning with `mcp__`, parses their visible names and
-  arguments, and renders a local summary.
-- The plugin **does not invoke tools or skills, start MCP servers, open MCP
-  transports, read MCP credentials, or make MCP requests**. It has no MCP client
-  code and no network path beyond the authenticated same-origin DSH file route
-  used by media.
+- The Calls tab and brain call nodes are **derived from the existing Session
+  journal**. The plugin recognizes the `skill` tool and tool names beginning with
+  `mcp__`, parses their visible names and arguments, and renders a local summary.
+- The plugin **does not invoke skills, start MCP servers, open MCP transports,
+  read MCP credentials, or make MCP requests**. It has no MCP client code and no
+  network path beyond the authenticated same-origin DSH file route used by media.
 - Tool arguments and results stay in the browser; they are not sent to a model,
   analytics endpoint, or third party.
 

@@ -1,15 +1,17 @@
 # Changelog
 
-## 1.6.0 — 2026-11-19
+## 1.6.1 — 2026-11-20
 
-- The **Calls** tab is now **Tools & Skills** and lists every tool call in the
-  loaded chat, not only skills and MCP: All / Tools / Skills / MCP filters,
-  grouped rows, search, status, timing, and click-to-open.
-- Generic tool calls use a bolt badge and a `TOOL` label; skill and MCP calls keep
-  their hexagon/port brain glyphs, family colors, labels, HUD counters, tooltips
-  and toast cards.
-- Updated the seven-language UI, plugin metadata, README, security model and
-  version to 1.6.0.
+- Restored the **Calls** tab: skill and MCP invocations only, with All/Skills/MCP
+  filters, status, timing, search and click-to-open node inspection. Ordinary
+  tool calls are no longer listed in this tab.
+- Kept the host language synchronization, the macOS fullscreen click fix for the
+  top panel, and the CSS parsing fix from the 1.6.0 line.
+- Preserved skill/MCP call nodes when older journal pages are loaded, so the Calls
+  tab still finds historical invocations.
+- Isolated the overlay from host language plugins that translate visible English
+  labels, keeping the tab labels in the selected plugin language.
+- Updated the bundled plugin version to 1.6.1.
 
 ## 1.5.1 — 2026-11-19
 
