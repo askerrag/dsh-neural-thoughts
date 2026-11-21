@@ -1,8 +1,8 @@
 {
   "name": "@local/neural-thoughts",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "private": true,
-  "description": "Read-only 3D neural map for DeepSeek Harness chats and projects, with skill/MCP call tracking, history playback, class lens, event cards, media gallery, text-file viewer and seven languages.",
+  "description": "Read-only 3D neural map for DeepSeek Harness chats and projects, with skill/MCP call tracking, history playback, class lens, event cards, media gallery, text-file viewer and eight languages.",
   "type": "module",
   "exports": {
     ".": "./index.js",

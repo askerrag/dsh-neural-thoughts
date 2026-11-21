@@ -50,7 +50,7 @@ and the authenticated attachment/file routes of the running DSH Web UI.
   **All / Skills / MCP** filters, status, timing, and click-to-open. On the brain,
   a skill gets a hexagon glyph and an MCP server call gets a port glyph, with
   family labels, live call counters, hover details and clickable call cards.
-- **Languages** — Russian, English, German, French, Spanish, Italian, Portuguese.
+- **Languages** — Russian, English, German, French, Spanish, Italian, Portuguese, Chinese.
   English is the default on first run; the choice is remembered after that.
 - **History timeline** — replay how the brain was built. Play/pause, restart,
   step back/forward, scrub the timeline, choose **0.5× / 1× / 2× / 4×**, loop,
@@ -105,7 +105,7 @@ root. Upload it as a GitHub release asset and paste the asset URL into
 
 ```sh
 npm pack
-# local-neural-thoughts-1.6.1.tgz
+# local-neural-thoughts-1.7.0.tgz
 ```
 
 The release tarball is optional: cloning the repository and choosing the folder
@@ -200,7 +200,7 @@ neural-thoughts/
 ├── index.js             # Host half: intentionally no services
 ├── cordis.patch.yml     # Inserts the bundle row
 ├── package.json         # DSH bundle + client manifest
-├── locale/              # Plugin display metadata (en, ru, de, fr, es, it, pt)
+├── locale/              # Plugin display metadata (en, ru, de, fr, es, it, pt, zh)
 ├── docs/                # Plugin detail pages + text-free feature preview
 └── icon.svg             # Original plugin icon
 ```

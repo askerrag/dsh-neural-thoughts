@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.7.0 — 2026-11-21
+
+- Added **Simplified Chinese** to the language selector and translated the
+  complete plugin UI, metadata and detail page into Chinese.
+- The language menu now offers eight languages; a stored Chinese preference is
+  remembered and `zh-CN` / `zh-Hans` host locales normalize to Chinese.
+- Updated the README language list, package description and bundled plugin
+  version to 1.7.0.
+
 ## 1.6.1 — 2026-11-20
 
 - Restored the **Calls** tab: skill and MCP invocations only, with All/Skills/MCP
